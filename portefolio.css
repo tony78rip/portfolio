@@ -1,0 +1,223 @@
+.presentation{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.facebook, .instagram, .linkedin, .github, .phone{
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+
+}
+
+
+body {
+  font-family: 'Rubik', monospace;
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 2px 2px 0 black;
+  background-image: url('./assets/BG_proto.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  image-rendering: pixelated;
+}
+
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;  
+  height: 100vh; 
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  margin: auto;
+}
+
+#loader img {
+  width: 50vw;
+  height: 50vh;
+  object-fit: contain; /* ou contain selon l'effet souhaité */
+  image-rendering: pixelated;
+}
+
+#sprite {
+  image-rendering: pixelated;
+  object-fit: cover;
+  width: 350px;
+  height: auto;
+}
+
+#diplomes {
+    position: relative;
+    overflow: hidden;
+}
+
+#informations-personnelles {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+}
+
+
+.pixel-btn {
+    background-image: url('./assets/boutton.jpg');
+    background-size: cover;
+    width: 150px;
+    height: 50px;
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.presentation-text {
+    max-width: 600px;
+    font-size: 1rem;
+}
+
+.presentation-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem; /* espace entre sprite et texte */
+    padding: 2rem;
+    flex-wrap: wrap; /* permet d'être responsive */
+}
+
+.pixel-btn:hover {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+h1, h2, h3 {
+  font-size: 2rem;
+  text-shadow: 2px 2px 0 black;
+  color: white;
+}
+
+h1, h2 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.2rem;
+}
+
+p, a, li {
+  font-family: 'VT323', monospace;
+  font-size: 1.5rem;
+}
+
+
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.tech {
+  position: relative;
+  width: 80px;
+  text-align: center;
+  color: white;
+  font-family: monospace;
+}
+
+.tech img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  cursor: pointer;
+  filter: drop-shadow(2px 2px 0 black);
+}
+
+.tech p {
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+
+.tech::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.75rem;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s ease;
+  white-space: nowrap;
+  z-index: 5;
+}
+
+.tech:hover::after {
+  opacity: 1;
+}
+
+
+.carousel {
+  overflow: hidden;
+  width: 100vw; /* toute la largeur de l’écran */
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px 0;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content; /* pour que ça déborde sans forcer */
+  animation: scroll 20s linear infinite;
+}
+
+.carousel-track img {
+  width: 100px;
+  height: auto;
+  margin: 0 40px;
+  object-fit: contain;
+  filter: drop-shadow(2px 2px 0 black);
+  transition: transform 0.2s;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.main-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 0 black;
+  font-family: 'Rubik', monospace; 
+  text-align: center;
+  margin: 1rem 0;
+}
+
+#informations-personnelles,
+#presentation,
+#diplomes,
+#competences,
+#projets,
+#contacts,
+#stage {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+
+
+
