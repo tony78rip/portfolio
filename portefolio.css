@@ -1,6 +1,6 @@
 .presentation{
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 
@@ -216,6 +216,11 @@ p, a, li {
 #stage {
   margin-top: 60px;
   margin-bottom: 60px;
+}
+
+.specialisation{
+  display: flex;
+  flex-direction: row;
 }
 
 
