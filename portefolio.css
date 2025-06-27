@@ -234,6 +234,10 @@ p, a, li {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
+.telephone{
+  display: flex;
+  flex-direction: row;
+}
 
 
 
