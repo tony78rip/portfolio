@@ -239,5 +239,11 @@ p, a, li {
   flex-direction: row;
 }
 
+footer{
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+}
+
 
 
